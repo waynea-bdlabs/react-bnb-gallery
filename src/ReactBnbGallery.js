@@ -120,6 +120,8 @@ class ReactBnbGallery extends Component {
   }
 
   render() {
+    console.debug('RENDER ReactBnbGallery!!!');
+
     const {
       show,
       phrases,

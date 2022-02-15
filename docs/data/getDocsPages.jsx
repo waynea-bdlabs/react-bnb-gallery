@@ -5,29 +5,19 @@ import { frontMatter as help } from '../pages/docs/help.mdx';
 
 export default [
   {
-    slug: 'documentation',
-    title: 'Documentation',
-    items: [
-      {
-        slug: 'installation',
-        url: '/docs/installation',
-        ...installation,
-      },
-      {
-        slug: 'options',
-        url: '/docs/options',
-        ...options,
-      },
-    ],
+    slug: 'installation',
+    data: installation,
+  },
+  {
+    slug: 'options',
+    data: options,
   },
   {
     slug: 'license',
-    url: '/docs/license',
-    ...license,
+    data: license,
   },
   {
     slug: 'help',
-    url: '/docs/help',
-    ...help,
+    data: help,
   },
 ];

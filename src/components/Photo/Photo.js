@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import {CardMedia} from '@material-ui/core';
 
 import omit from 'lodash/omit';
 import classnames from 'classnames';
@@ -13,6 +14,7 @@ import {
 } from '../../common';
 import { forbidExtraProps } from '../../common/prop-types';
 import noop from '../../utils/noop';
+import Video from "../Media/Video";
 
 const propTypes = forbidExtraProps({
   ...imagePropTypes,
@@ -63,6 +65,33 @@ class Photo extends PureComponent {
     } = omit(rest, [
       'onPress',
     ]);
+
+    if (Video.isVideo(photo)) {
+      return (
+        <button
+          type="button"
+          onClick={this.onPress}
+          className="video-button"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
+          <Video
+            alt={photo.caption || ''}
+            className="photo"
+            src={photo.video}
+            onLoad={onLoad}
+            onError={onError}
+            style={style}
+          />
+          {/*<CardMedia component="iframe"*/}
+          {/*           height={340}*/}
+          {/*           frameBorder="0"*/}
+          {/*           allowfullscreen="allowfullscreen"*/}
+          {/*           src={photo.video} />*/}
+        </button>
+      );
+    }
 
     return (
       <button

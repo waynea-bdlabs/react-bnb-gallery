@@ -27,6 +27,7 @@ export const INVERSE_COLOR = 'rgba(1,1,1,1)';
 export const DEFAULT_Z_INDEX = 2000;
 
 export const defaultPhotoProps = {
+  video: undefined,
   photo: undefined,
   number: undefined,
   caption: undefined,

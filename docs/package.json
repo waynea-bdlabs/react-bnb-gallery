@@ -6,23 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "yarn build && next export"
+    "deploy": "yarn && yarn build",
+    "preview": "yarn && yarn dev"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.6",
     "@next/mdx": "^9.4.4",
-    "@tailwindcss/typography": "^0.1.2",
     "@tailwindcss/ui": "^0.3.0",
     "autoprefixer": "^9.8.4",
     "classnames": "^2.2.6",
     "next": "9.4.4",
-    "netlify-plugin-cache-nextjs": "^1.4.0",
     "next-mdx-enhanced": "^3.0.0",
-    "next-transpile-modules": "^3.3.0",
     "postcss-nesting": "^7.0.1",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
-    "react-bnb-gallery": "^1.4.4",
+    "react-bnb-gallery": "file:../",
     "react-dom": "16.13.1",
     "tailwindcss": "^1.4.6"
   }

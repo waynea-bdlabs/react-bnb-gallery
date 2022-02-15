@@ -58,23 +58,17 @@ class PhotoGrid extends PureComponent {
     return columns;
   }
 
-  renderPhoto({
-    src,
-    width,
-    height,
-  }) {
+  renderPhoto(photo) {
     const {
       onPhotoPress,
     } = this.props;
 
     return (
       <Image
-        key={src}
+        key={photo.src}
         onPress={onPhotoPress}
         columnSize={this.columnWidth}
-        src={src}
-        width={width}
-        height={height}
+        {...photo} // eslint-disable-line
       />
     );
   }
