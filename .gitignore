@@ -6,7 +6,6 @@ node_modules
 
 # production
 build
-dist
 .rpt2_cache
 
 # misc
@@ -16,6 +15,7 @@ dist
 .env.development.local
 .env.test.local
 .env.production.local
+.idea
 
 # Ignore test-related files
 /coverage.data
